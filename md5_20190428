@@ -1,0 +1,38 @@
+ class Login(View):
+#     def get(self, request):
+#
+#         username = request.GET.get("username")
+#         password = request.GET.get("password")
+#         sql = f"select UserPasword from UserDate where UserName='{username}'"
+#
+#         # 执行数据库操作
+#         cursor.execute(sql)
+#
+#         OutputPassword = cursor.fetchone()
+#         if OutputPassword:
+#             OutputPassword = OutputPassword['UserPasword'].replace(' ', '')
+#
+#             m1 = hashlib.md5()
+#             m1.update(password.encode("utf-8"))
+#             data1 = m1.hexdigest()
+#
+#             m2 = hashlib.md5()
+#             m2.update(OutputPassword.encode("utf-8"))
+#             data2 = m2.hexdigest()
+#
+#             print(data1)
+#             print(data2)
+#
+#             # 密码匹配
+#             if data1 == data2:
+#                 role = str(random.random())
+#
+#                 m3 = hashlib.md5()
+#                 m3.update(role.encode("utf-8"))
+#                 data3 = m3.hexdigest()
+#
+#                 sql = f"update UserDate set [Check]='{data3}' where UserName='{username}'"
+#                 cursor.execute(sql)
+#                 return JsonResponse({'type': 'success', 'Role': data3})
+#         else:
+#             return JsonResponse({'type': 'error'})
